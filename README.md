@@ -12,7 +12,7 @@ pip install click
 
 ## Usage
 
-An example code showing the usage of click:
+An example code showing the usage of click on a function:
 
 ```bash
 import click
@@ -28,5 +28,25 @@ def hello(count, name):
 
 if __name__ == '__main__':
     hello()
+
+```
+
+You can use this command line to find out what option you have:
+
+```bash
+$python filename.py --help
+```
+
+and that command line will show thisL
+
+```bash
+Usage: filename.py [OPTIONS]
+
+  Simple program that greets NAME for a total of COUNT times.
+
+Options:
+  --count INTEGER  Number of greetings.
+  --name TEXT      The person to greet.
+  --help           Show this message and exit.
 
 ```
