@@ -10,7 +10,7 @@ Use the package manager [pip](https://pypi.org/project/click/) to install foobar
 $ pip install click
 ```
 
-## Usage
+## Usage with Functions:
 
 An example code showing the usage of click on a function:
 
@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
 ```
 
-You can use this command line to find out what option you have:
+You can use this command line to find out what options you have:
 
 ```bash
 $ python filename.py --help
@@ -71,3 +71,45 @@ Hello John!
 Hello John!
 Hello John!
 ```
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+
+## Usage with Classes
+
+An example code showing the usage of click in a class:
+
+```bash
+import click
+
+
+class Employee():
+  def __init__(self, name, title, salary):
+    self.name = name
+    self.title = title
+    self.salary = salary
+
+  def introduce(self):
+    print("I am {}. I work as {}. I make {}.".format(self.name, self.title, self.salary))
+
+@click.command()
+@click.option('--name', required=True, default=None,  help='Name of employee')
+@click.option('--title', required=True, default=None, help='Job title of employee')
+@click.option('--salary', required=True, default=None, help='How much money the employee makes')
+
+def runIntroduction(name,title,salary):
+  x = Employee(name,title,salary)
+  x.introduce()
+
+
+if __name__ == '__main__':
+    runIntroduction()
+```
+
