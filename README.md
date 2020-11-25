@@ -7,7 +7,7 @@ Click is a Python package for creating beautiful command line interfaces in a co
 Use the package manager [pip](https://pypi.org/project/click/) to install foobar.
 
 ```bash
-pip install click
+$ pip install click
 ```
 
 ## Usage
@@ -34,10 +34,10 @@ if __name__ == '__main__':
 You can use this command line to find out what option you have:
 
 ```bash
-$python filename.py --help
+$ python filename.py --help
 ```
 
-and that command line will show thisL
+and that command line will show this:
 
 ```bash
 Usage: filename.py [OPTIONS]
@@ -49,4 +49,25 @@ Options:
   --name TEXT      The person to greet.
   --help           Show this message and exit.
 
+```
+
+you can use the commands that you see in options like this:
+
+```bash
+$ python filename.py --count 10 --name 'John'
+```
+
+and it would return this:
+
+```bash
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
+Hello John!
 ```
